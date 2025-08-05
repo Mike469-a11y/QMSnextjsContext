@@ -1,0 +1,15 @@
+{
+  "/admin/page": "app/admin/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/admin/tracking-performance/page": "app/admin/tracking-performance/page.js",
+  "/admin/usermanagement/page": "app/admin/usermanagement/page.js",
+  "/approval/page": "app/approval/page.js",
+  "/assignment/page": "app/assignment/page.js",
+  "/execution/page": "app/execution/page.js",
+  "/order-complete/page": "app/order-complete/page.js",
+  "/page": "app/page.js",
+  "/qms/[id]/page": "app/qms/[id]/page.js",
+  "/sourcing/page": "app/sourcing/page.js",
+  "/submission/page": "app/submission/page.js",
+  "/submitted-data/page": "app/submitted-data/page.js"
+}
