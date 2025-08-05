@@ -1,20 +1,20 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation, useNavigate } from "react-router-dom";
-import Qms from "./components/pages/Qms";
-import Assignment from "./components/pages/Assignment";
-import QmsDetailsPage from "./components/pages/QmsDetailsPage";
-import AdminPanel from "./components/admin/AdminPanel";
-import UserManagement from "./components/admin/UserManagement";
-import AddUser from "./components/admin/AddUser";
-import PerformanceTracking from "./components/admin/PerformanceTracking";
-import Approval from "./components/pages/Approval";
-import SubmittedData from "./components/pages/SubmittedData";
-import Sourcing from "./components/pages/Sourcing";
-import SourcingDetails from "./components/pages/SourcingDetails"; // NEW IMPORT
-import Submission from "./components/pages/Submission";
-import Execution from "./components/pages/Execution";
-import OrderComplete from "./components/pages/OrderComplete";
-import "./styles/App.css";
+import Qms from "./Qms";
+import Assignment from "./Assignment";
+import QmsDetailsPage from "./QmsDetailsPage";
+import AdminPanel from "./AdminPanel";
+import UserManagement from "./UserManagement";
+import AddUser from "./AddUser";
+import PerformanceTracking from "./PerformanceTracking";
+import Approval from "./Approval";
+import SubmittedData from "./SubmittedData";
+import Sourcing from "./Sourcing";
+import SourcingDetails from "./SourcingDetails"; // NEW IMPORT
+import Submission from "./Submission";
+import Execution from "./Execution";
+import OrderComplete from "./OrderComplete";
+import "./App.css";
 
 // Current Date and Time (UTC - YYYY-MM-DD HH:MM:SS formatted): 2025-07-26 04:21:57
 // Current User's Login: MFakheem

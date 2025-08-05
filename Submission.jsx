@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo, useCallback, memo } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import IndexedDBManager from '../../utils/IndexedDBManager';
-import '../../styles/Submission.css';
+import IndexedDBManager from './IndexedDBManager';
+import './Submission.css';
 
 const Submission = () => {
     const navigate = useNavigate();
