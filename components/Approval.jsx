@@ -150,6 +150,7 @@ const ApprovalRemarksModal = memo(({
 
 const Approval = () => {
     const router = useRouter();
+    const [isMounted, setIsMounted] = useState(false);
     const [approvalEntries, setApprovalEntries] = useState([]);
     const [loading, setLoading] = useState(true);
     const [filterStatus, setFilterStatus] = useState('all');
@@ -631,6 +632,14 @@ const Approval = () => {
             isSubmitting: false
         });
     }, []);
+
+    useEffect(() => {
+        setIsMounted(true);
+    }, []);
+
+    if (!isMounted) {
+        return <div>Loading...</div>;
+    }
 
     // ✅ NEW: Handle approval remarks submit
     const handleApprovalRemarksSubmit = useCallback(async () => {

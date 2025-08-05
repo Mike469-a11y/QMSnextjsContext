@@ -8,7 +8,7 @@ import './Submission.css';
 
 const Submission = () => {
     const router = useRouter();
-    const { reviewId } = useParams();
+    const [isMounted, setIsMounted] = useState(false);
     const [submissionEntries, setSubmissionEntries] = useState([]);
     const [loading, setLoading] = useState(true);
     const [filterStatus, setFilterStatus] = useState('all');
@@ -149,6 +149,14 @@ const Submission = () => {
             console.error('Failed to initialize IndexedDB:', error);
         });
     }, []);
+
+    useEffect(() => {
+        setIsMounted(true);
+    }, []);
+
+    if (!isMounted) {
+        return <div>Loading...</div>;
+    }
 
     // ✅ FIX: Reset review state when navigating back to submission dashboard from sidebar
     useEffect(() => {

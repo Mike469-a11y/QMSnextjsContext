@@ -3,13 +3,13 @@
   "/_not-found/page": "/_not-found",
   "/admin/tracking-performance/page": "/admin/tracking-performance",
   "/admin/usermanagement/page": "/admin/usermanagement",
-  "/approval/page": "/approval",
   "/assignment/page": "/assignment",
   "/execution/page": "/execution",
   "/order-complete/page": "/order-complete",
-  "/page": "/",
   "/qms/[id]/page": "/qms/[id]",
   "/sourcing/page": "/sourcing",
-  "/submission/page": "/submission",
-  "/submitted-data/page": "/submitted-data"
+  "/submitted-data/page": "/submitted-data",
+  "/approval/page": "/approval",
+  "/page": "/",
+  "/submission/page": "/submission"
 }

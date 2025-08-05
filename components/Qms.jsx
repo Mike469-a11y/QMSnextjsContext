@@ -8,6 +8,7 @@ const currentUser = 'MFakheem';
 const todayStr = new Date().toISOString().slice(0, 10);
 
 const Qms = () => {
+    const [isMounted, setIsMounted] = useState(false);
     const [huntingView, setHuntingView] = useState("search");
     const [searchInputs, setSearchInputs] = useState({
         fromDate: "",
@@ -51,23 +52,39 @@ const Qms = () => {
     }, []);
 
     useEffect(() => {
-        const section = new URLSearchParams(location.search).get("section");
-        if (section === "hunting") {
-            setHuntingView("search");
-        }
+        if (typeof window !== 'undefined') {
+            const urlParams = new URLSearchParams(window.location.search);
+            const section = urlParams.get("section");
+            const editId = urlParams.get("edit");
+            
+            if (section === "hunting") {
+                setHuntingView("search");
+            }
 
-        // Check if we're editing an entry
-        if (location.state?.editEntry) {
-            const editEntry = location.state.editEntry;
-            setNewEntry(editEntry);
-            setIsEditing(true);
-            setEditingId(editEntry.id);
-            setHuntingView("add");
-
-            // Clear the state to prevent issues on refresh
-            window.history.replaceState({}, document.title);
+            // Check if we're editing an entry
+            if (editId) {
+                const stored = localStorage.getItem("huntingEntries");
+                if (stored) {
+                    const parsedEntries = JSON.parse(stored);
+                    const editEntry = parsedEntries.find(entry => entry.id === editId);
+                    if (editEntry) {
+                        setNewEntry(editEntry);
+                        setIsEditing(true);
+                        setEditingId(editEntry.id);
+                        setHuntingView("add");
+                    }
+                }
+            }
         }
-    }, [location]);
+    }, []);
+
+    useEffect(() => {
+        setIsMounted(true);
+    }, []);
+
+    if (!isMounted) {
+        return <div>Loading...</div>;
+    }
 
     const handleSearchChange = (e) => {
         const { name, value } = e.target;
