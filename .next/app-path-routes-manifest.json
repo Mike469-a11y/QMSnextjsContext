@@ -1,0 +1,15 @@
+{
+  "/admin/page": "/admin",
+  "/_not-found/page": "/_not-found",
+  "/admin/tracking-performance/page": "/admin/tracking-performance",
+  "/admin/usermanagement/page": "/admin/usermanagement",
+  "/assignment/page": "/assignment",
+  "/execution/page": "/execution",
+  "/order-complete/page": "/order-complete",
+  "/qms/[id]/page": "/qms/[id]",
+  "/sourcing/page": "/sourcing",
+  "/submitted-data/page": "/submitted-data",
+  "/approval/page": "/approval",
+  "/page": "/",
+  "/submission/page": "/submission"
+}

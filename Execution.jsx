@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import CreditBalanceOverview from '../shared/CreditBalanceOverview';
-import OrderTracker from '../shared/OrderTracker';
-import '../../styles/Execution.css';
+import CreditBalanceOverview from './CreditBalanceOverview';
+import OrderTracker from './OrderTracker';
+import './Execution.css';
 
 const Execution = () => {
     const [currentView, setCurrentView] = useState('main'); // 'main', 'credit', 'orders'

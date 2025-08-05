@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import IndexedDBManager from '../../utils/IndexedDBManager';
-import '../../styles/OrderTracker.css';
+import IndexedDBManager from './IndexedDBManager';
+import './OrderTracker.css';
 
 const OrderTracker = ({ onBack, currentUser, currentDateTime }) => {
     const [orders, setOrders] = useState([]);

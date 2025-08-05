@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
-import "../../styles/App.css";
+import "./App.css";
 
 const SECTIONS = [
     { key: "admin", label: "Admin Panel", icon: "⚙️" },

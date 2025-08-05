@@ -1,0 +1,10 @@
+{
+  "extends": ["next/core-web-vitals"],
+  "rules": {
+    "no-unused-vars": "warn",
+    "no-undef": "warn",
+    "react-hooks/exhaustive-deps": "warn",
+    "no-unsafe-optional-chaining": "warn",
+    "react-refresh/only-export-components": "off"
+  }
+}

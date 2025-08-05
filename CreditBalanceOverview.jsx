@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import '../../styles/CreditBalanceOverview.css';
+import './CreditBalanceOverview.css';
 
 const CreditBalanceOverview = ({ onBack, currentUser, currentDateTime }) => {
     // ✅ Credit/Balance State

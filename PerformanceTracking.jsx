@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../../styles/PerformanceTracking.css";
+import "./PerformanceTracking.css";
 
 const PerformanceTracking = () => {
     const [performanceData, setPerformanceData] = useState([]);
